@@ -198,6 +198,7 @@
         </div>
 
         <!-- Pilihan Role -->
+<!-- Pilihan Role (Hanya Pembeli) -->
 <div class="mb-4">
     <label class="form-label small fw-medium text-dark">Daftar Sebagai</label>
     <div class="d-flex gap-3">
@@ -207,14 +208,9 @@
                 🛒 Pembeli
             </label>
         </div>
-        <div class="form-check">
-            <input class="form-check-input" type="radio" name="role" id="roleAdmin" value="admin">
-            <label class="form-check-label" for="roleAdmin">
-                🛠️ Admin
-            </label>
-        </div>
+        <!-- Pilihan Admin DIHAPUS -->
     </div>
-    <small class="text-muted" style="font-size: 12px;">Pilih peran Anda di toko</small>
+    <small class="text-muted" style="font-size: 12px;">Saat ini hanya pendaftaran untuk pembeli</small>
 </div>
 
         <!-- Tombol Register -->
