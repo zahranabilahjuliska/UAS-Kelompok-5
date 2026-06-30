@@ -116,20 +116,15 @@ class AuthController {
             exit;
         }
 
-        // Ambil role dari form (default pembeli)
-        $role = $_POST['role'] ?? 'pembeli';
+        // Paksa role menjadi pembeli (admin tidak bisa daftar)
+        $role = 'pembeli';
 
-        // Validasi role hanya boleh 'admin' atau 'pembeli'
-        if (!in_array($role, ['admin', 'pembeli'])) {
-            $role = 'pembeli';
-        }
-
-        // Simpan user baru dengan role
+        // Simpan user baru dengan role pembeli
         $berhasil = $this->userModel->create([
             'nama' => $nama,
             'email' => $email,
             'password' => $password,
-            'role' => $role,
+            'role' => $role,  // <-- SELALU PEMBELI
         ]);
 
         if ($berhasil) {
